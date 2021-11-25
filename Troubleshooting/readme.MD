@@ -9,4 +9,4 @@ numpy - 1.20.3\
 matplotlib - 3.4.2\
 scipy - 1.7.1\
 keras - 2.4.3\
-scikitlearn (sklearn) - 0.24.2\
+scikitlearn (sklearn) - 0.24.2
