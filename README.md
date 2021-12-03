@@ -1,10 +1,9 @@
 # TES-Analysis-Program
-This repo contains a program written in python 3 for automatically analyzing TES data output in both a single setup and in a FDM setup. This software is the next generation from the software written by Callum Blair:
-**Callum Github Link
+This repo contains a program written in python 3.7 for automatically analyzing TES data output in both a single setup and in a FDM setup. This software is the next generation from the software written by [Callum Blair](https://github.com/cgfb94/sensor-analysis) and contains a neural network written by [Arnold Dongelmans](https://github.com/AwesomeArnold/Neuralnetwork). The program itself contains a few examples that show the basics and how to access values and parameters.
 
 # Downloading the Software
 The program is contained in the TES_Analysis_Program.ipynb. This file can be downloaded and opened with jupyter notebook or similar notebook interpreters. 
-A list of the library dependencies used for testing can be found in the troubleshooting directory.
+A list of the library dependencies used for testing can be found in the troubleshooting directory. Using jupyter lab or any extension that allows for codefolding is recommended, as each individual class is rather large. 
 
 # Program Walkthrough
 The basic structure is as follows: All IV objects are stored within IV_series. Each IV object holds one dataset read out by one of the three read_data methods. 
@@ -21,3 +20,5 @@ Note that the path is set to the location of the filelist, and hence any files l
 ## Calculating Parameters
 There are 2 ways of obtaining certain values. Firstly, the easiest way, is to use `IV_object.calc_all()`. This option calculates all values in the right order. Secondly, the functions can be called separately from each other. Do note that some functions require certain values that might not be present in the dataset, which are calculated somewhere else. 
 
+## Multi-Set Graphs
+The `IV_series` class also has several methods to plot calculated information from multiple datasets together. This is usually done by looping over all the datasets in either `data_double` or `data_single`, calculating all parameters and then plotting certain parameters from these calculated values for each dataset.  
